@@ -1,0 +1,8 @@
+﻿@model Slider
+<div style="position:absolute; left:300px; top:50px">
+	<h1 class="text-center">Slider detail</h1>
+	<h4>Title: @Model.Title</h4>
+	<h4>Description: @Model.Description</h4>
+	<h4>Image: <img src="~/assets/images/@Model.Image" alt="Alternate Text" style="width:300px" /></h4>
+	<a asp-action="Index" class="btn btn-primary mt-5">Back</a>
+</div>

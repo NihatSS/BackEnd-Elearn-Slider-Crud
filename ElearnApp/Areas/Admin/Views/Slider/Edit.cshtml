@@ -1,0 +1,20 @@
+﻿@model SliderEditVM
+
+<div style="position:absolute; left:300px; top:50px; width:50%">
+	<h3>Edit slider</h3>
+	<form asp-action="Edit" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data">
+		<input id="btn-input" type="text" asp-for="Title" class="form-control input-sm" placeholder="Enter slider title" style="width:60%; margin-top:20px" />
+
+		<input id="btn-input" type="text" asp-for="Description" class="form-control input-sm" placeholder="Enter slider description" style="width:60%; margin-top:20px" />
+
+		<img src="/assets/images/@Model.Image" alt="Alternate Text" style="width:450px;margin-top:30px" />
+
+		<input type="file" asp-for="Photo" class="form-control input-sm" style="width:60%; margin-top:20px" />
+		<span class="text-danger" asp-validation-for="Title"></span>
+		<div style="display:flex; gap:10px; margin-top:10px">
+			<button type="submit" class="btn btn-success">Submit</button>
+			<a asp-action="Index" class="btn btn-primary">Back</a>
+
+		</div>
+	</form>
+</div>

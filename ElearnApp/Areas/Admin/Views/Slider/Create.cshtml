@@ -1,0 +1,18 @@
+﻿@model Slider
+
+<div style="position:absolute; left:300px; top:50px; width:50%">
+	<h3>Create new slider</h3>
+	<form asp-action="Create" method="post" enctype="multipart/form-data">
+		<input id="btn-input" type="text" asp-for="Title" class="form-control input-sm" placeholder="Enter slider title" style="width:60%; margin-top:20px" />
+		<span class="text-danger" asp-validation-for="Title"></span>
+		<input id="btn-input" type="text" asp-for="Description" class="form-control input-sm" placeholder="Enter slider description" style="width:60%; margin-top:20px" />
+		<span class="text-danger" asp-validation-for="Title"></span>
+		<input type="file" asp-for="Photo" class="form-control input-sm" style="width:60%; margin-top:20px" />
+		<span class="text-danger" asp-validation-for="Title"></span>
+		<div style="display:flex; gap:10px; margin-top:10px">
+			<button type="submit" class="btn btn-success">Submit</button>
+			<a asp-action="Index" class="btn btn-primary">Back</a>
+
+		</div>
+	</form>
+</div>
